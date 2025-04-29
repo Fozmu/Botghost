@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="./images/cs.png">
+
+<meta property="og:title" content="Community Guides">
+<meta property="og:description" content="Community Guides that were tested and approved by the Community Members. Learn how to create awesome commands, how to solve problems and more!">
+<meta property="og:image" content="https://community-guides.netlify.app/images/banner_cg.png">
+<meta property="og:url" content="https://community-guides.netlify.app/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Community Guides">
+<meta name="twitter:description" content="Community Guides that were tested and approved by the Community Members. Learn how to create awesome commands, how to solve problems and more!">
+<meta name="twitter:image" content="https://community-guides.netlify.app/images/banner_cg.png">
+<meta name="twitter:url" content="https://community-guides.netlify.app/">
+<meta content="#ff4f4f" data-react-helmet="true" name="theme-color" />
+</head>
+<body>
+
+<section>
+
+<div class="titel-bgvar">
+ <h1><a href="credits.html">👻</a>Community Guides</h1>
+ <h6 class="rtx">This Document has not been made by BotGhost.</h6>
+</div>
+
+<div>
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search for Articles...">
+</div>
+
+<ul id="articleList">
+  <li class="article-item" data-title="infinite loops"><a href="#infinite-loops">Infinite Loops</a> Learn how to create infinite loops by using the BotGhost Webhook and send a API request block.</li>
+  <li class="article-item" data-title="Discord Benefits"><a href="#discord-benefits">BotGhost Discord Server Benefits</a> Learn more about the benefits of Server Boosting or having Premium.</li>
+  <li class="article-item" data-title="Image Generation Bug"> <a href="#Image-Generation-Bug">Image Generation Bug</a> Solution to the BotGhost Image Generation error.</li>
+  <li class="article-item" data-title="Credits"><a href="credits.html">Credits</a> See who helped this project!</li>
+  <li class="article-item" data-title="Transcript"><a href="#transcript">Ticket Transcript</a> learn how to crete a free ticket transcript.</li>
+</div>
+
+
+<div class="card-group">
+
+
+    <div class="card" style="width: 18rem; border-radius: 10px;">
+        <div class="card-body">
+          <h5 class="card-title">Infinite loops</h5> 
+          <p class="card-text">Learn how to create infinite loops by using the BotGhost Webhook and send a API request block.</p>
+          <a href="#infinite-loops" class="card-link">Read Article</a>  <span class="badge rounded-pill text-bg-danger">New</span>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem; border-radius: 10px;">
+        <div class="card-body">
+          <h5 class="card-title">BotGhost Discord Server Benefits</h5>
+          <p class="card-text">Learn more about the benefits of Server Boosting or having Premium.</p>
+         <div class="card-link"> <a href="#discord-benefits" class="card-link">Read Article</a>  <span class="badge rounded-pill text-bg-danger">New</span></div> 
+        </div>
+      </div>
+
+      
+
+      <div class="card" style="width: 18rem; border-radius: 10px;">
+        <div class="card-body">
+          <h5 class="card-title">Image Generation Bug</h5>
+          <p class="card-text">Are you experiencing issues with the Image Generation Module? We have a step-by-step solution!</p>
+          <a href="#Image-Generation-Bug" class="card-link">Read Article</a>  <span class="badge rounded-pill text-bg-danger">New</span>
+        </div>
+      </div>
+
+</div>
+</section>
+
+<section>
+  <div class="module-title" id="infinite-loops"><h2>Infinite Loops</h2></div>
+  <div class="module-action">
+      <p>We will use for this as an example a Rating System. We will make a special channels for submiting a server review.</p>
+      <p><code>/setup-review-system</code> command start</p>
+    <ul>
+      <li>Send form</li>
+      <li>Send ephemeral reply message</li>
+      <li>Send an API request to your BG webhook with the form responses as variables</li>
+    </ul>
+  
+    <p><strong>Webhook Event:</strong></p>
+    <ul>
+      <li>Webhook event start</li>
+      <li>Send review message and button</li>
+      <li>Button click start</li>
+      <li>Send form</li>
+      <li>Send ephemeral reply message</li>
+      <li>Send another API request to your BG webhook with the form responses as variables</li>
+    </ul>
+    <p>Set at the end of the <code>/setup-review-system</code> blocks a send an API request block.</p>
+    <p><strong>Method:</strong> <code>POST</code> <code>https://api.botghost.com/webhook/{bot_id}/{event_id}</code></p>
+    <p><strong>Headers:</strong></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Authorization</td>
+          <td><code>API_KEY</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <p>Credits: Jayce</p>
+  </div>
+</section>
+
+
+<section>
+<div class="module-title" id="discord-benefits"><h2>Discord Priority Benefits</h2>
+</div>
+
+<div class="module-action">
+  <ul>
+    <p>Some of the BotGhost Server Discord Benefits for Premium Members and Server Boosters are listed below:</p>
+    <p class="discord">#❓┃priority-Support</p>
+    <p>Tired of the chaos in the basic support channel? switch to priority-support and have an 1:1 session with the Community Support. <br> Simply create a post and wait for someone to respond. But please don't ping anyone for support!</p>
+    <p class="discord">#⭐┃vip-chat</p>
+    <p>If you have access to this chat, you are one of the server VIPs. Talk to other VIP Members about BotGhosting or anything you want. <br> But please still follow the guidelines. and Do not use the VIP-chat for Support.</p>
+    <p class="discord">@👑 Botghost Premium Member</p>
+    <p>What's better than having an exlusive role and flexing it all arround the server? <br> You can also change the crown icon by selecting the Crown 1 or Crown 2 role. </p>
+    <p class="discord">@💎 Server Booster</p>
+    <p>It's almost the same as the BotGhost Premium Member role but a different color and a different name. <br> You can also change the diamond icon by selecting the Booster 1 or Booster 2 role.</p>
+  </ul>
+  </div>
+</section>
+
+
+
+<section>
+<div class="module-title" id="Image-Generation-Bug"><h2>Image Generation Bug</h2></div>
+<div class="module-action"><p>Are you experiencing a bug with the following Image Generation Module? We have a solution listed below:</p>
+  <ul>
+    <li>Make a <code>Custom Variable</code> Learn how by reading the <a href="https://docs.botghost.com/custom-commands-and-events/data-storage#creating-a-new-variable">BotGhost Docs</a></li>
+    <li>Save the API Key in the <code>Custom Variable</code></li>
+  </ul>
+<img src="./images/example api image.png" alt=""> <br> <br>
+    <ul>
+    <li>Use the <code>Custom Variable</code> as the API Key</li>
+
+
+  </ul>
+<p>That's pretty much it, if it doesn't help you, please contact the <code>Community Support Members</code>. </p>
+<p>Credits: iDlrp</p>
+
+</div>
+</section>
+
+<section>
+
+<div class="module-title" id="transcript"><h2><span class="rtx">Free</span> Ticket Transcripts</h2></div>
+<div class="module-action"><p>Are you looking for a free ticket transcript? We have a step-by-step guide listed below:</p>
+  <ol>
+    <li>Head over to <a href="https://www.cookie-api.com">Cookie API</a></li>
+    <li>Creat an account and head over to <code>Overview</code>. Once there copy the <code>Api Key</code>.</li>
+    <li>Go back to Botghost and add an API request.</li>
+<br>
+    <li>Set the methode as <span class="rtx">Post</span> and as the url enter <code>https://api.cookie-api.com/api/transcript</code></li>
+    <li>In the url Paragrams add <code>channel_id</code> as the key and enter a valid channel id in the value section. <br> (This can be replaced by a variable after step 10.)</li>
+    <li>Head over to the HTTP Headers and add <code>Authorization</code> as your key. In the value section enter the API Key from before.</li>
+    <li>Head over to the Request Body. Add <code>bot_token</code> as the key.</li>
+    <li>For the value we will need the bot token. <code>{TOKEN_SECRET}</code> wont work. we will need to use our real bot token. <br> (Bot token can be reset in the Discord developer page under the bot section.)</li>
+   <br> 
+
+   <img src="./images/imagetp231.png" style="width: 900px;" alt="">
+   <br> <br>
+
+    <li>Test the request if you get a <code>code 400</code> check for any typos and make sure you dont have any variables. <br>If you get a <code>code 200</code> everything worked.</li>
+    <li>copy the variable for the url that you received. </li>
+    <li>Replace all ids with variables so you can use it in your system.</li>
+  </ol>
+  <p>You should be all done, if you have any questions ask a <span class="rtx">CS member</span>.</p>
+  <ul>
+  <li><a href="https://docs.botghost.com/custom-commands-and-events/actions/api-actions/send-an-api-request">BotGhost's API Docs</a></li>
+  <li><a href="https://docs.cookie-api.com/en/docs/getting-started/home/">Cookie's API Docs</a></li>
+  </ul>
+  <p>Credits: Betaburger</p>
+</div>
+
+
+
+</section>
+
+
+
+
+
+<script>
+  if (window.innerWidth <= 668) {
+    window.location.href = 'mobile.html';
+  }
+</script>
+<script src="script.js"></script>
+</body>
+</html>
