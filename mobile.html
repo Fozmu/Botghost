@@ -1,15 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-<h3>Website Not Available</h3>
-<p>Sorry, the website you are trying to access is not available for mobile users. Please switch to desktop.</p>
+
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            background-image: linear-gradient(to right, #1f1e1e, #222);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title-bgvar {
+            margin: 5vh;
+            align-content: center;
+            text-align: center;
+            background-image: radial-gradient(circle, #103238 0%, #131313 100%);
+            max-height: fit-content;
+            border-radius: 20px;
+        }
+
+        code {
+            color: #ff4f4f
+        }
+
+        .rtx {
+            color: #ff4f4f;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+
+        .card {
+            margin-left: 30px;
+            margin-right: 30px;
+            background-image: linear-gradient(to top right, #1b1b1b, #131f21, #121212);
+            color: white;
+
+        }
+
+        a {
+            color: #ff4f4f;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #cb1010;
+        }
+
+        ol li::marker {
+            color: #ff4f4f;
+        }
+
+        ul li::marker {
+            color: #ff4f4f;
+        }
+
+
+
+        .article-item {
+            display: none;
+            background-color: #28292d;
+            color: #dcddde;
+            padding: 15px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            font-family: sans-serif;
+            margin-right: 1Fvh;
+        }
+
+
+        .search-container {
+            background-color: #202225;
+            border-radius: 5px;
+            padding: 5px;
+            margin-bottom: 10px;
+            margin-right: auto;
+        }
+
+        #searchInput {
+            background-color: #2f3237;
+            border: none;
+            color: #e1e1e1;
+            font-size: 16px;
+            width: 100%;
+            padding: 8px;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        #searchInput::placeholder {
+            color: #aeaeae;
+        }
+
+        #searchInput:focus {
+            outline: none;
+            box-shadow: 0 0 3px #7289da;
+            border: 1px solid #7289da;
+        }
+    </style>
+
+
+    <section>
+
+        <div>
+            <div class="title-bgvar" style="width: 95%; margin-left: 6px;">
+                <h2>👻 Commuinity <span class="rtx">Guides</span></h2>
+                <h3><code>Mobile</code> version</h3>
+            </div>
+        </div>
+
+
+        <div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for Articles...">
+            </div>
+
+            <ul id="articleList">
+                <li class="article-item" data-title="infinite loops"><a href="#infinite-loops">Infinite Loops</a> Learn
+                    how to create infinite loops by using the BotGhost Webhook and send a API request block.</li>
+                <li class="article-item" data-title="Discord Benefits"><a href="#discord-benefits">BotGhost Discord
+                        Server Benefits</a> Learn more about the benefits of Server Boosting or having Premium.</li>
+                <li class="article-item" data-title="Image Generation Bug"> <a href="#Image-Generation-Bug">Image
+                        Generation Bug</a> Solution to the BotGhost Image Generation error.</li>
+                <li class="article-item" data-title="Transcript"><a href="#transcript">Ticket Transcript</a> learn how
+                    to crete a free ticket transcript.</li>
+        </div>
+
+
+
+    </section>
+
+
 
 </body>
+<script src="mobile.js"></script>
+
 </html>

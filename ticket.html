@@ -1,123 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-<link rel="icon" href="./images/cs.png">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+  <link rel="icon" href="./images/cs.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <style>
-.smaller {
+  .smaller {
     max-width: 60%;
     max-height: 60%;
-}
-
+  }
 </style>
 
 <body>
-    
 
-<div class="titel-bgvar">
+
+  <div class="title-bgvar">
     <h1>Advanced Tickets <span class="rtx">By Betaburger</span></h1>
-</div>
-<section>
+  </div>
+  <section>
 
-<div class="module-title"><h2>Advanced Tickets</h2></div>
-<div class="module-action">
-    <p>1. Make a command, enter the name and description.</p>
+    <div class="module-title">
+      <h2>Advanced Tickets</h2>
+    </div>
+    <div class="module-action">
+      <p>1. Make a command, enter the name and description.</p>
 
-    <p>2. Add a `Send or edit a channel` block. Enter the message builder. This will be our <b>Ticket Panel</b>. <br> The Panel should describe what tickets are and what each topic does.</p>
-    <p>Here's an example of what the Ticket Panel might look like:</p>
-    <p>
-      Welcome to our ticket system!  Please select the appropriate option below to create a ticket.
-    </p>
-    <ol>
-      <li>General Support: For questions or issues not covered by the other categories.</li>
-      <li>Billing Inquiries: For questions about your subscription or payments.</li>
-      <li>Report a User: To report harassment, abuse, or other violations of our community guidelines.</li>
-    </ol>
-    
-    <p>3. Add a button, each button will be responsible for opening a ticket. Make sure to set `Show Button Replies` to `Hide replies`.</p>
-   
-    
-    <p>4. Add an `Set a unique variable` block. As the name you can choose what you want,  we will be using `{opener}`and set the value to `{user_id}` This will save the ticket opener for later use.</p>
-    
-    <br> <img class="smaller" src="tickets/useridsaveticket.png" alt=""> <br> <br>
+      <p>2. Add a `Send or edit a channel` block. Enter the message builder. This will be our <b>Ticket Panel</b>. <br>
+        The Panel should describe what tickets are and what each topic does.</p>
+      <p>Here's an example of what the Ticket Panel might look like:</p>
+      <p>
+        Welcome to our ticket system! Please select the appropriate option below to create a ticket.
+      </p>
+      <ol>
+        <li>General Support: For questions or issues not covered by the other categories.</li>
+        <li>Billing Inquiries: For questions about your subscription or payments.</li>
+        <li>Report a User: To report harassment, abuse, or other violations of our community guidelines.</li>
+      </ol>
 
-    <p>5. Add a `Send a form` block, the form name can be whatever you want.  The form will be used for the opener to describe their issue. <br> You can build your form however you want, However make sure you stay in these guidelines otherwise your form won't work.</p>
-    <ul>
-      <li>A Form can have a total of 5 Fields.</li>
-      <li>A Form's title has a maximum length of 45 characters.</li>
-      <li>The text input label has a maximum length of 45 characters.</li>
-      <li>The placeholder is limited to 100 characters.</li>
-      <li>A variable name is required for your form to function.</li>
-    </ul>
-    <br> <img class="smaller" src="tickets/formbuilder.png" alt=""> <br> <br>
-    
-    
-    <p>6. Add a `Create a channel` block.</p>
-    
-    <p>7. Set an optional variable, you can choose what variable you want, we will use {ticket}.  (This variable will return the channel ID of the created channel.)</p>
-    
-    <p>8. Set a name for the channel. Remember to stay within channel guidelines. No special symbols. For this example we will name our tickets `ticket-{user_name}`</p>
-    
-    <p>9. Set the channel type to `Text Channel` a topic is not required.</p>
-    
-    <p>10. Set the category, this is the place where all tickets will arrive.  If no category is entered, the tickets will appear outside a category at the top of the channel list.</p>
-    
-    <p>11. NSFW, Slow mode and Server ID are all optional and can be ignored.</p>
-
-    <br> <img class="smaller" src="tickets/otherchannelsettings.png" alt=""> <br> <br>
-    
-    <p>12. Scroll down to the permission section and switch the first permission to `User`  and in the field that appears paste the unique variable ({opener}).  Then give the `VIEW_CHANNEL`. <br> The second permission will be for our @ everyone role.  Give this role the `SEND_MESSAGES, ATTACH_FILES` `EMBED_LINKS`. <br> And deny the `VIEW_CHANNEL` permission. Our last Permission will be for our staff, give them the `VIEW_CHANNEL` Permission.</p>
-    
-    <p>If the channel isn't creating, check:</p>
-    <ul>
-      <li><b>Channel name:</b> No special characters</li>
-      <li><b>Permissions:</b> Valid role/variable</li>
-      <li><b>Category:</b> Valid id/category</li>
-      <li><b>Bot role:</b> Bot has admin and bot role is above any role in the permission field.</li>
-      <li><b>Bot:</b> Make sure the bot is online</li>
-      <li>Check error logs for anything.</li>
-    </ul>
-    
-    <br> <img class="smaller" src="tickets/perms.png" alt=""> <br> <br>
-
-    <p>13. Add a `Send or edit a message` block, this will be used to notify the opener that the channel was created.</p>
-    <p>Example:</p>
-    <p>Your ticket has been created! Please go to your ticket channel.</p>
-    
-    <p>14. Add another `Send or edit a message` block, this will be similar to a panel.   (You can use the variable from the form to retrieve the reason for opening the ticket)</p>
-
-    
-    <p>15. Change the `Response type` in the panel made in step 14. And change the type to `Send the message to a specific channel`and enter your channel variable from step 7 ({ticket}).</p>
-    
-    <img class="smaller" src="tickets/made ticket.png" alt="">
-
-    <p>16. Add a button for closing the ticket.</p>
-    
-    <p>17. Add a `Delete a channel` block and select `Channel ID or Variable` and place the variable from step 7 ({ticket}).</p>
-    
-    <br> <img class="smaller" src="tickets/delete channel.png" alt=""> <br> <br>
-
-    <p>This Ticket system can be expanded with:</p>
-    <ul>
-      <li>Claiming tickets</li>
-      <li>Logging</li>
-      <li>Transcripts</li>
-      <li>Multiple ticket types (billing, management, report etc...)</li>
-      <li>Close request</li>
-      <li>Rename</li>
-    </ul>
-
-</div>
+      <p>3. Add a button, each button will be responsible for opening a ticket. Make sure to set `Show Button Replies`
+        to `Hide replies`.</p>
 
 
-</section>
+      <p>4. Add an `Set a unique variable` block. As the name you can choose what you want, we will be using
+        `{opener}`and set the value to `{user_id}` This will save the ticket opener for later use.</p>
+
+      <br> <img class="smaller" src="tickets/useridsaveticket.png" alt=""> <br> <br>
+
+      <p>5. Add a `Send a form` block, the form name can be whatever you want. The form will be used for the opener to
+        describe their issue. <br> You can build your form however you want, However make sure you stay in these
+        guidelines otherwise your form won't work.</p>
+      <ul>
+        <li>A Form can have a total of 5 Fields.</li>
+        <li>A Form's title has a maximum length of 45 characters.</li>
+        <li>The text input label has a maximum length of 45 characters.</li>
+        <li>The placeholder is limited to 100 characters.</li>
+        <li>A variable name is required for your form to function.</li>
+      </ul>
+      <br> <img class="smaller" src="tickets/formbuilder.png" alt=""> <br> <br>
+
+
+      <p>6. Add a `Create a channel` block.</p>
+
+      <p>7. Set an optional variable, you can choose what variable you want, we will use {ticket}. (This variable will
+        return the channel ID of the created channel.)</p>
+
+      <p>8. Set a name for the channel. Remember to stay within channel guidelines. No special symbols. For this example
+        we will name our tickets `ticket-{user_name}`</p>
+
+      <p>9. Set the channel type to `Text Channel` a topic is not required.</p>
+
+      <p>10. Set the category, this is the place where all tickets will arrive. If no category is entered, the tickets
+        will appear outside a category at the top of the channel list.</p>
+
+      <p>11. NSFW, Slow mode and Server ID are all optional and can be ignored.</p>
+
+      <br> <img class="smaller" src="tickets/otherchannelsettings.png" alt=""> <br> <br>
+
+      <p>12. Scroll down to the permission section and switch the first permission to `User` and in the field that
+        appears paste the unique variable ({opener}). Then give the `VIEW_CHANNEL`. <br> The second permission will be
+        for our @ everyone role. Give this role the `SEND_MESSAGES, ATTACH_FILES` `EMBED_LINKS`. <br> And deny the
+        `VIEW_CHANNEL` permission. Our last Permission will be for our staff, give them the `VIEW_CHANNEL` Permission.
+      </p>
+
+      <p>If the channel isn't creating, check:</p>
+      <ul>
+        <li><b>Channel name:</b> No special characters</li>
+        <li><b>Permissions:</b> Valid role/variable</li>
+        <li><b>Category:</b> Valid id/category</li>
+        <li><b>Bot role:</b> Bot has admin and bot role is above any role in the permission field.</li>
+        <li><b>Bot:</b> Make sure the bot is online</li>
+        <li>Check error logs for anything.</li>
+      </ul>
+
+      <br> <img class="smaller" src="tickets/perms.png" alt=""> <br> <br>
+
+      <p>13. Add a `Send or edit a message` block, this will be used to notify the opener that the channel was created.
+      </p>
+      <p>Example:</p>
+      <p>Your ticket has been created! Please go to your ticket channel.</p>
+
+      <p>14. Add another `Send or edit a message` block, this will be similar to a panel. (You can use the variable from
+        the form to retrieve the reason for opening the ticket)</p>
+
+
+      <p>15. Change the `Response type` in the panel made in step 14. And change the type to `Send the message to a
+        specific channel`and enter your channel variable from step 7 ({ticket}).</p>
+
+      <img class="smaller" src="tickets/made ticket.png" alt="">
+
+      <p>16. Add a button for closing the ticket.</p>
+
+      <p>17. Add a `Delete a channel` block and select `Channel ID or Variable` and place the variable from step 7
+        ({ticket}).</p>
+
+      <br> <img class="smaller" src="tickets/delete channel.png" alt=""> <br> <br>
+
+      <p>This Ticket system can be expanded with:</p>
+      <ul>
+        <li>Claiming tickets</li>
+        <li>Logging</li>
+        <li>Transcripts</li>
+        <li>Multiple ticket types (billing, management, report etc...)</li>
+        <li>Close request</li>
+        <li>Rename</li>
+      </ul>
+
+    </div>
+
+
+  </section>
 
 </body>
+
 </html>

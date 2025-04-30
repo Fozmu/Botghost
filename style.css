@@ -1,41 +1,42 @@
 body {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
-color: white;    
-background-image: linear-gradient(to right, #1f1e1e, #222);
-display: flex;
-flex-direction: column;
-align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background-image: linear-gradient(to right, #1f1e1e, #222);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.titel-bgvar {
-    margin: 10vh;
-    align-content: center;
-    text-align: center;
-    background-image: radial-gradient(circle, #16282b 0%, #131313 100%);
-    padding: 25px;
-    max-height: fit-content;
-    border-radius: 20px;
+.title-bgvar {
+  margin: 10vh;
+  align-content: center;
+  text-align: center;
+  background-image: radial-gradient(circle, #16282b 0%, #131313 100%);
+  padding: 25px;
+  max-height: fit-content;
+  border-radius: 20px;
 }
+
 .rtx {
-    color: #ff4f4f;
+  color: #ff4f4f;
 }
 
 .underline {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 
 .card {
-    margin-left: 30px;
-    margin-right: 30px;
-    background-image: linear-gradient(to top right, #1b1b1b, #131f21,  #121212);
-    color: white;
-    
-  }
+  margin-left: 30px;
+  margin-right: 30px;
+  background-image: linear-gradient(to top right, #1b1b1b, #131f21, #121212);
+  color: white;
+
+}
 
 a {
-    color: #ff4f4f;
-    text-decoration: none;
+  color: #ff4f4f;
+  text-decoration: none;
 }
 
 a:hover {
@@ -77,13 +78,13 @@ ul li::marker {
 }
 
 code {
-    color:#ff4f4f
-
+  color: #ff4f4f
 }
 
-th, td {
-    padding-right: 30px;
-  }
+th,
+td {
+  padding-right: 30px;
+}
 
 
 
@@ -111,68 +112,68 @@ th, td {
 
 
 .discord {
-    color: white;
-    background-color: #00aeff3f;
-    max-width: fit-content;
-    padding: 4px;
-    border-radius: 5px;
+  color: white;
+  background-color: #00aeff3f;
+  max-width: fit-content;
+  padding: 4px;
+  border-radius: 5px;
 }
 
 .discord:hover {
   color: white;
   background-color: #00aeff83;
- 
+
 }
 
-html, body {
-    overflow-y: scroll;
-  }
+html,
+body {
+  overflow-y: scroll;
+}
 
 
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
+::-webkit-scrollbar {
+  width: 8px;
+}
 
-  ::-webkit-scrollbar-thumb {
-    background-color: #fc4e4e;
-    border-radius: 7px;
-  }
+::-webkit-scrollbar-thumb {
+  background-color: #fc4e4e;
+  border-radius: 7px;
+}
 
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #bb3a3a;
-  }
+::-webkit-scrollbar-thumb:hover {
+  background-color: #bb3a3a;
+}
 
-  ::-webkit-scrollbar-track {
-    background-color: #181717;
-  }
+::-webkit-scrollbar-track {
+  background-color: #181717;
+}
 
 
 
-  .article-item {
-    display: none;
-
-    background-color: #28292d;
-    color: #dcddde;
-    padding: 15px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    font-family: sans-serif;
-    margin-right: 4vh;
-  }
+.article-item {
+  display: none;
+  background-color: #28292d;
+  color: #dcddde;
+  padding: 15px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  font-family: sans-serif;
+  margin-right: 4vh;
+}
 
 
 .search-container {
-  background-color: #36393f;
+  background-color: #202225;
   border-radius: 5px;
   padding: 5px;
   margin-bottom: 10px;
-  margin-right: 104vh;
+  margin-right: 600px;
 }
 
 #searchInput {
-  background-color: #40444b;
+  background-color: #2f3237;
   border: none;
-  color: #dcddde;
+  color: #e1e1e1;
   font-size: 16px;
   width: 100%;
   padding: 8px;
@@ -181,7 +182,7 @@ html, body {
 }
 
 #searchInput::placeholder {
-  color: #72767d;
+  color: #aeaeae;
 }
 
 #searchInput:focus {
@@ -189,8 +190,6 @@ html, body {
   box-shadow: 0 0 3px #7289da;
   border: 1px solid #7289da;
 }
-
-
 
 
 
@@ -219,17 +218,17 @@ html, body {
 
 
 #back-to-top {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 10;
-    cursor: pointer; 
-    opacity: 0; 
-    transition: opacity 0.3s ease-in-out;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 #back-to-top.show {
-    display: block; 
-    opacity: 1; 
+  display: block;
+  opacity: 1;
 }
