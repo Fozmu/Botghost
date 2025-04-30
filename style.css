@@ -86,6 +86,30 @@ th, td {
   }
 
 
+
+.up {
+  color: #222;
+  font-weight: bold;
+  background-color: #ff4f4f;
+  padding: 10px;
+  min-width: 50px;
+  border-radius: 5px;
+  max-width: fit-content;
+}
+
+
+.up:hover {
+  color: #ff4f4f;
+  font-weight: bold;
+  background-color: #222;
+  padding: 10px;
+  min-width: 50px;
+  border-radius: 5px;
+  max-width: fit-content;
+}
+
+
+
 .discord {
     color: white;
     background-color: #00aeff3f;
@@ -191,4 +215,21 @@ html, body {
   .mobile-only {
     display: block;
   }
+}
+
+
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    cursor: pointer; 
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out;
+}
+
+#back-to-top.show {
+    display: block; 
+    opacity: 1; 
 }
