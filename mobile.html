@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community Guides Mobile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -84,7 +89,7 @@
         .search-container {
             background-color: #202225;
             border-radius: 5px;
-            padding: 5px;
+            padding: 2px;
             margin-bottom: 10px;
             margin-right: auto;
         }
@@ -95,7 +100,7 @@
             color: #e1e1e1;
             font-size: 16px;
             width: 100%;
-            padding: 8px;
+            padding: 3px;
             border-radius: 3px;
             box-sizing: border-box;
         }
@@ -111,13 +116,12 @@
         }
     </style>
 
-
-    <section>
+ <section id="main">
 
         <div>
-            <div class="title-bgvar" style="width: 95%; margin-left: 6px;">
-                <h2>👻 Community <span class="rtx">Guides</span></h2>
-                <h3><code>Mobile</code> version</h3>
+            <div class="title-bgvar" style="width: 95%; margin-left: 2%;">
+                <h3>👻 Community <span class="rtx">Guides</span></h3>
+                <h6><code>Mobile</code> version</h6>
             </div>
         </div>
 
@@ -141,6 +145,150 @@
 
 
     </section>
+
+<div style="max-width: 250px; margin-left: 0%; font-size: 10px;">
+
+    <section>
+        <div class="module-title" id="infinite-loops">
+          <h3>Infinite Loops</h3>
+        </div>
+        <div class="module-action">
+          <p>We will use for this as an example a Rating System. We will make a special channels for submiting a server
+            review.</p>
+          <p><code>/setup-review-system</code> command start</p>
+          <ul>
+            <li>Send form</li>
+            <li>Send ephemeral reply message</li>
+            <li>Send an API request to your BG webhook with the form responses as variables</li>
+          </ul>
+    
+          <p><strong>Webhook Event:</strong></p>
+          <ul>
+            <li>Webhook event start</li>
+            <li>Send review message and button</li>
+            <li>Button click start</li>
+            <li>Send form</li>
+            <li>Send ephemeral reply message</li>
+            <li>Send another API request to your BG webhook with the form responses as variables</li>
+          </ul>
+          <p>Set at the end of the <code>/setup-review-system</code> blocks a send an API request block.</p>
+          <p><strong>Method:</strong> <code>POST</code> <br> <code>https://api.botghost.com/webhook/{bot_id}/{event_id}</code>
+          </p>
+          <p><strong>Headers:</strong></p>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Authorization</td>
+                <td><code>API_KEY</code></td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <p>Credits: Jayce</p>
+        </div>
+      </section>
+    
+    
+      <section>
+        <div class="module-title" id="discord-benefits">
+          <h3>Discord Priority Benefits</h3>
+        </div>
+    
+        <div class="module-action">
+          <ul>
+            <p>Some of the BotGhost Server Discord Benefits for Premium Members and Server Boosters are listed below:</p>
+            <p class="discord">#❓┃priority-Support</p>
+            <p>Tired of the chaos in the basic support channel? switch to priority-support and have an 1:1 session with the
+              Community Support. <br> Simply create a post and wait for someone to respond. But please don't ping anyone for
+              support!</p>
+            <p class="discord">#⭐┃vip-chat</p>
+            <p>If you have access to this chat, you are one of the server VIPs. Talk to other VIP Members about BotGhosting
+              or anything you want. <br> But please still follow the guidelines. and Do not use the VIP-chat for Support.
+            </p>
+            <p class="discord">@👑 Botghost Premium Member</p>
+            <p>What's better than having an exlusive role and flexing it all arround the server? <br> You can also change
+              the crown icon by selecting the Crown 1 or Crown 2 role. </p>
+            <p class="discord">@💎 Server Booster</p>
+            <p>It's almost the same as the BotGhost Premium Member role but a different color and a different name. <br> You
+              can also change the diamond icon by selecting the Booster 1 or Booster 2 role.</p>
+          </ul>
+        </div>
+      </section>
+    
+    
+    
+      <section>
+        <div class="module-title" id="Image-Generation-Bug">
+          <h3>Image Generation Bug</h3>
+        </div>
+        <div class="module-action">
+          <p>Are you experiencing a bug with the following Image Generation Module? We have a solution listed below:</p>
+          <ul>
+            <li>Make a <code>Custom Variable</code> Learn how by reading the <a
+                href="https://docs.botghost.com/custom-commands-and-events/data-storage#creating-a-new-variable">BotGhost
+                Docs</a></li>
+            <li>Save the API Key in the <code>Custom Variable</code></li>
+          
+            <li>Use the <code>Custom Variable</code> as the API Key</li>
+    
+    
+          </ul>
+          <p>That's pretty much it, if it doesn't help you, please contact the <code>Community Support Members</code>. </p>
+          <p>Credits: iDlrp</p>
+    
+        </div>
+      </section>
+    
+      <section>
+    
+        <div class="module-title" id="transcript">
+          <h3><span class="rtx">Free</span> Ticket Transcripts</h3>
+        </div>
+        <div class="module-action">
+          <p>Are you looking for a free ticket transcript? We have a step-by-step guide listed below:</p>
+          <ol>
+            <li>Head over to <a href="https://www.cookie-api.com">Cookie API</a></li>
+            <li>Creat an account and head over to <code>Overview</code>. Once there copy the <code>Api Key</code>.</li>
+            <li>Go back to Botghost and add an API request.</li>
+            <br>
+            <li>Set the methode as <span class="rtx">Post</span> and as the url enter
+              <code>https://api.cookie-api.com/api/transcript</code></li>
+            <li>In the url Paragrams add <code>channel_id</code> as the key and enter a valid channel id in the value
+              section. <br> (This can be replaced by a variable after step 10.)</li>
+            <li>Head over to the HTTP Headers and add <code>Authorization</code> as your key. In the value section enter the
+              API Key from before.</li>
+            <li>Head over to the Request Body. Add <code>bot_token</code> as the key.</li>
+            <li>For the value we will need the bot token. <code>{TOKEN_SECRET}</code> wont work. we will need to use our
+              real bot token. <br> (Bot token can be reset in the Discord developer page under the bot section.)</li>
+        
+    
+            <li>Test the request if you get a <code>code 400</code> check for any typos and make sure you dont have any
+              variables. <br>If you get a <code>code 200</code> everything worked.</li>
+            <li>copy the variable for the url that you received. </li>
+            <li>Replace all ids with variables so you can use it in your system.</li>
+          </ol>
+          <p>You should be all done, if you have any questions ask a <span class="rtx">CS member</span>.</p>
+          <ul>
+            <li><a
+                href="https://docs.botghost.com/custom-commands-and-events/actions/api-actions/send-an-api-request">BotGhost's
+                API Docs</a></li>
+            <li><a href="https://docs.cookie-api.com/en/docs/getting-started/home/">Cookie's API Docs</a></li>
+          </ul>
+          <p>Credits: Betaburger</p>
+        </div>
+    
+    
+    
+      </section>
+    </div>
+    
+  <a href="#main" class="btn btn-danger">↑</a>
 
 
 
