@@ -10,20 +10,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
-    <link rel="manifest" href="/manifest.json">
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(registration => {
-                        console.log('Service Worker registered! Scope:', registration.scope);
-                    })
-                    .catch(err => {
-                        console.log('Service Worker registration failed:', err);
-                    });
-            });
-        }
-    </script>
+        <link rel="manifest" href="/manifest.json">
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js')
+                        .then(registration => {
+                            console.log('Service Worker registered! Scope:', registration.scope);
+                        })
+                        .catch(err => {
+                            console.log('Service Worker registration failed:', err);
+                        });
+                });
+            }
+        </script>
 </head>
 
 <body>
