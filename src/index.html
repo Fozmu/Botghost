@@ -1,391 +1,1054 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
   <title>Community Guides</title>
   <link rel="icon" href="./codehub-logo.png">
-<meta property="og:title" content="Community Guides">
-<meta property="og:description" content="Community Guides that were tested and approved by the Community Members. Learn how to create awesome commands, how to solve problems and more!">
-<meta property="og:image" content="https://cs.code-hub.cc/codehub_guides.png">
-<meta property="og:url" content="https://cs.code-hub.cc/">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Community Guides">
-<meta name="twitter:description" content="Community Guides that were tested and approved by the Community Members. Learn how to create awesome commands, how to solve problems and more!">
-<meta name="twitter:image" content="https://cs.code-hub.cc/codehub_guides.png">
-<meta name="twitter:url" content="https://cs.code-hub.cc/">
-<meta content="#60a5fa" data-react-helmet="true" name="theme-color">
+  <meta property="og:title" content="Community Guides">
+  <meta property="og:description"
+    content="Community Guides that were tested and approved by the Community Members. Learn how to create awesome commands, how to solve problems and more!">
+  <meta property="og:image" content="https://cs.code-hub.cc/codehub_guides.png">
+  <meta property="og:url" content="https://cs.code-hub.cc/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Community Guides">
+  <meta name="twitter:description"
+    content="Community Guides that were tested and approved by the Community Members. Learn how to create awesome commands, how to solve problems and more!">
+  <meta name="twitter:image" content="https://cs.code-hub.cc/codehub_guides.png">
+  <meta name="twitter:url" content="https://cs.code-hub.cc/">
+  <meta content="#60a5fa" data-react-helmet="true" name="theme-color">
 </head>
+
 <body class="bg-gray-900">
+
+
+
 
   <div class="desktop-only">
 
-  <div class="bg-gray-900 min-h-screen flex">
-    <aside class="bg-gray-800 text-white w-64 p-6 fixed h-screen overflow-y-auto">
-      <div class="relative mb-8">
-        <input type="text" id="searchInput" class="bg-gray-700 text-white rounded-md py-2 px-4 w-full outline-none ring-2 ring-blue-400" placeholder="Search for Articles...">
+    <div class="bg-gray-900 min-h-screen flex">
+      <aside class="bg-gray-800 text-white w-64 p-6 fixed h-screen overflow-y-auto">
+        <div class="relative mb-8">
+          <input type="text" id="searchInput"
+            class="bg-gray-700 text-white rounded-md py-2 px-4 w-full outline-none ring-2 ring-blue-400"
+            placeholder="Search for Articles...">
+        </div>
+        <nav>
+          <h2 class="text-gray-400 uppercase tracking-wider font-semibold text-sm mb-2 mt-5">Home</h2>
+          <ul id="articleList" class="space-y-2">
+            <li class="article-item">
+              <button type="button" id="sidebar-community-guides"
+                class="w-full text-left block hover:text-blue-400 cursor-pointer p-1 rounded-md">
+                <span data-title="community guides">Community Guides</span>
+                <p class="text-gray-400 text-xs">Official Community Guides page...</p>
+              </button>
+            </li>
+            <li class="article-item">
+              <button type="button" id="sidebar-credits"
+                class="w-full text-left block hover:text-blue-400 cursor-pointer p-1 rounded-md">
+                <span data-title="Credits">Credits</span>
+                <p class="text-gray-400 text-xs">See who helped this project!</p>
+              </button>
+            </li>
+            <h2 class="text-gray-400 uppercase tracking-wider font-semibold text-sm mb-2 mt-5">Community</h2>
+
+            <li class="article-item">
+              <button type="button" id="sidebar-vote"
+                class="w-full text-left block hover:text-blue-400 cursor-pointer p-1 rounded-md">
+                <span data-title="voting system">Voting System</span>
+                <p class="text-gray-400 text-xs">Learn how to make a voting system...</p>
+              </button>
+            </li>
+
+            <h2 class="text-gray-400 uppercase tracking-wider font-semibold text-sm mb-2 mt-5">Loops</h2>
+            <li class="article-item">
+              <button type="button" id="sidebar-infinite-loops"
+                class="w-full text-left block hover:text-blue-400 cursor-pointer p-1 rounded-md">
+                <span data-title="infinite loops">Infinite Loops</span>
+                <p class="text-gray-400 text-xs">Learn how to create infinite loops...</p>
+              </button>
+            </li>
+            <h2 class="text-gray-400 uppercase tracking-wider font-semibold text-sm mb-2 mt-5">Tickets</h2>
+            <li class="article-item">
+              <button type="button" id="sidebar-transcript"
+                class="w-full text-left block hover:text-blue-400 cursor-pointer p-1 rounded-md">
+                <span data-title="transcript">Ticket Transcript</span>
+                <p class="text-gray-400 text-xs">Learn how to create transcripts...</p>
+              </button>
+            </li>
+            <h2 class="text-gray-400 uppercase tracking-wider font-semibold text-sm mb-2 mt-5">Error Solving</h2>
+            <li class="article-item">
+              <button type="button" id="sidebar-godaddy"
+                class="w-full text-left block hover:text-blue-400 cursor-pointer p-1 rounded-md">
+                <span data-title="godaddy domain issue">GoDaddy Domain Issue</span>
+                <p class="text-gray-400 text-xs">Solution to the image generation...</p>
+              </button>
+            </li>
+            <li class="article-item">
+              <button type="button" id="sidebar-img-error"
+                class="w-full text-left block hover:text-blue-400 cursor-pointer p-1 rounded-md">
+                <span data-title="image generation bug">Image Generation Bug</span>
+                <p class="text-gray-400 text-xs">Solution to the image generation...</p>
+              </button>
+            </li>
+            <h2 class="text-gray-400 uppercase tracking-wider font-semibold text-sm mb-2 mt-5">API Services</h2>
+            <li class="article-item">
+              <button type="button" id="sidebar-gemini"
+                class="w-full text-left block hover:text-blue-400 cursor-pointer p-1 rounded-md">
+                <span data-title="gemini chatbot">Gemini ChatBot</span>
+                <p class="text-gray-400 text-xs">Create your own AI ChatBot...</p>
+              </button>
+            </li>
+
+            <footer class="bg-gray-800">
+              <div
+                class="bg-gray-800 border-1 rounded-[10%] border-green-800 p-4 mt-8 text-center text-gray-300 text-sm">
+                <p>© 2025 Code Hub Community Guides. All rights reserved.</p>
+                <br>
+                <p><strong>Join the Code Hub Discord Server</strong></p>
+              </div>
+            </footer>
+
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="flex-1 p-8 ml-64">
+        <div id="desktop-main-content-area">
+          <header class="mb-8 flex items-center justify-between">
+            <p class="text-8xl font-semibold text-white flex items-center">
+              Community Guides</p>
+            <img src="./codehub-logo.png" alt="Community Guides Icon" class="mr-25 w-35 h-35">
+            <div class="text-gray-400">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+
+              </path>
+            </div>
+          </header>
+
+          <div id="desktop-modules-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+
+
+            <a href="https://discord.gg/X5ESGvdP74" target="_blank"
+              class="bg-gray-800 border-yellow-400 border-1 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
+              <div class="w-20 h-20 mr-4 flex-shrink-0">
+                <img src="discord.png" alt="">
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-1">Code Hub Discord Server</h3>
+                <p class="text-gray-400 text-sm">Join our awesome Developer Community and become a Pro!</p>
+                <p class="text-gray-400 text-sm">Help us improve the guides!</p>
+              </div>
+            </a>
+
+            <a href="https://partners.code-hub.cc" target="_blank"
+              class="bg-gray-800  border-green-400 border-1 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
+              <div class="w-21 h-21 mr-4 flex-shrink-0 rounded-md">
+                <img class="rounded-full" src="codehub-stars.png" alt="">
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-1">Code Hub Partners</h3>
+                <p class="text-gray-400 text-sm">All Official Partners of Code Hub can be found here.</p>
+                <p class="text-gray-400 text-sm">Advertisement • Recommended</p>
+              </div>
+            </a>
+
+            <button id="module-infinite-loops" type="button"
+              class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 cursor-pointer">
+              <div class="w-20 h-20 mr-4 flex-shrink-0">
+                <img src="./infinite loops.png">
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-1 text-left">Infinite Loops</h3>
+                <p class="text-gray-400 text-sm text-left">Learn how to create Infinite Loops using BotGhost Webhooks
+                </p>
+                <p class="text-gray-400 text-sm text-left">Step-by-step explained</p>
+              </div>
+            </button>
+
+            <button id="module-transcript" type="button"
+              class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 cursor-pointer">
+              <div class="w-20 h-20 mr-4 flex-shrink-0">
+                <img src="./transcript.png" alt="">
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-1 text-left">Ticket Transcripts</h3>
+                <p class="text-gray-400 text-sm text-left">Create Transcripts for your tickets</p>
+                <p class="text-gray-400 text-sm text-left">Step-by-step explained</p>
+              </div>
+            </button>
+
+            <button id="module-img-error" type="button"
+              class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 cursor-pointer">
+              <div class="w-20 h-20 mr-4 flex-shrink-0">
+                <img src="./img.bug.png" alt="">
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-1 text-left">Image Generation Bug</h3>
+                <p class="text-gray-400 text-sm text-left">Solution to the image generation bug.</p>
+                <p class="text-gray-400 text-sm text-left">Step-by-step explained</p>
+              </div>
+            </button>
+
+            <button id="module-gemini" type="button"
+              class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 cursor-pointer">
+              <div class="w-20 h-20 mr-4 flex-shrink-0">
+                <img src="gemini.png" alt="">
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-1 text-left">Gemini ChatBot</h3>
+                <p class="text-gray-400 text-sm text-left">Set up a free AI Chatbot using Google AI Studio's API</p>
+                <p class="text-gray-400 text-sm text-left">Step-by-step explained</p>
+              </div>
+            </button>
+
+            <button id="module-godaddy" type="button"
+              class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 cursor-pointer">
+              <div class="w-20 h-20 mr-4 flex-shrink-0">
+                <img src="godaddy.png" alt="">
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-1 text-left">GoDaddy Domain Issue</h3>
+                <p class="text-gray-400 text-sm text-left">Can't connect BotPanel with a GoDaddy Domain?</p>
+                <p class="text-gray-400 text-sm text-left">Step-by-step explained</p>
+              </div>
+            </button>
+
+            <button id="module-vote" type="button"
+              class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 cursor-pointer">
+              <div class="w-20 h-20 mr-4 flex-shrink-0">
+                <img src="./vote.png" alt="">
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-1 text-left">Voting System</h3>
+                <p class="text-gray-400 text-sm text-left">Create Free and Beginner Friendly Voting System.</p>
+                <p class="text-gray-400 text-sm text-left">Step-by-step explained</p>
+              </div>
+            </button>
+
+
+
+          </div>
+        </div>
+
+        <div id="content-credits" class="hidden bg-gray-800 rounded-lg p-6 mt-6 text-white">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <p class="text-3xl font-semibold mb-4">Credits</p>
+            <img src="./codehub_blue-bg.png" alt="Community Guides Icon" class="ml-120 w-15 h-15 mb-2" />
+          </div>
+          <p>This page acknowledges all the contributors and helpers for this project.</p> <br>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="bg-gray-800 border-yellow-400 border-1 rounded-lg p-6 flex items-center transition-all duration-300 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
+          <div class="w-20 h-20 mr-4 flex-shrink-0">
+            <img src="codehub_blue-bg.png" alt="">
+            </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-1">Foz</h3>
+            <p class="text-gray-400 text-sm">Lead Developer</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-800  border-blue-500 border-1 rounded-lg p-6 flex items-center transition-all duration-300 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
+          <div class="w-20 h-20 mr-4 flex-shrink-0">
+            <img src="./discord.png" alt="">
+            </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-1">Taco</h3>
+            <p class="text-gray-400 text-sm">Developer</p>
+          </div>
+        </div>
+
+
+        <div class="bg-gray-800 border-blue-500 border-1 rounded-lg p-6 flex items-center transition-all duration-300 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
+          <div class="w-20 h-20 mr-4 flex-shrink-0">
+            <img class="rounded-full" src="./codehub-stars.png" alt="">
+            </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-1">Exhai</h3>
+            <p class="text-gray-400 text-sm">Developer + Docs Writer + Designer</p>
+          </div>
+        </div>
+  
+        <div class="bg-gray-800 border-blue-500 border-1 rounded-lg p-6 flex items-center transition-all duration-300 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
+          <div class="w-20 h-20 mr-4 flex-shrink-0">
+            <img src="./discord.png" alt="">
+            </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-1">MagicGamer</h3>
+            <p class="text-gray-400 text-sm">Manager</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 border-blue-500 border-1 rounded-lg p-6 flex items-center transition-all duration-300 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
+          <div class="w-20 h-20 mr-4 flex-shrink-0">
+            <img src="./discord.png" alt="">
+            </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-1">Hakimi</h3>
+            <p class="text-gray-400 text-sm">Manager + Docs Writer + Designer</p>
+          </div>
+        </div>
+  
+
+        <div class="bg-gray-800 border-blue-500 border-1 rounded-lg p-6 flex items-center transition-all duration-300 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
+          <div class="w-20 h-20 mr-4 flex-shrink-0">
+            <img src="./discord.png" alt="">
+            </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-1">Dab</h3>
+            <p class="text-gray-400 text-sm">Moderator + Docs Writer + Designer</p>
+          </div>
+        </div>
+
+         <div class="bg-gray-800 border-blue-500 border-1 rounded-lg p-6 flex items-center transition-all duration-300 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
+          <div class="w-20 h-20 mr-4 flex-shrink-0">
+            <img src="./discord.png" alt="">
+            </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-1">Omar</h3>
+            <p class="text-gray-400 text-sm">Moderator + Docs Writer</p>
+          </div>
+        </div>
+
+         <div class="bg-gray-800 border-blue-500 border-1 rounded-lg p-6 flex items-center transition-all duration-300 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
+          <div class="w-20 h-20 mr-4 flex-shrink-0">
+            <img src="./discord.png" alt="">
+            </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-1">Eddy</h3>
+            <p class="text-gray-400 text-sm">Moderator + Designer</p>
+          </div>
+        </div>
+
+  
+
+
+
+       
       </div>
-      <nav>
-        <h2 class="text-gray-400 uppercase tracking-wider font-semibold text-sm mb-2 mt-5">Home</h2>
-        <ul id="articleList" class="space-y-2">
-          <li class="article-item" style="display: block;">
-            <a href="index.html#" class="block hover:text-blue-400">
-              <span data-title="infinite loops">Community Guides</span>
-              <p class="text-gray-400 text-xs">Official Community Guides page...</p>
-            </a>
-          </li>
-          <li class="article-item" style="display: block;">
-            <a href="credits.html" class="block hover:text-blue-400">
-              <span data-title="Credits">Credits</span>
-              <p class="text-gray-400 text-xs">See who helped this project!</p>
-            </a>
-          </li>
-          <h2 class="text-gray-400 uppercase tracking-wider font-semibold text-sm mb-2 mt-5">Community</h2>
+        </div>
 
-          <li class="article-item" style="display: block;">
-            <a href="vote.html" class="block hover:text-blue-400">
-              <span data-title="infinite loops">Voting System</span>
-              <p class="text-gray-400 text-xs">Learn how to make a voting system...</p>
-            </a>
-          </li>
 
-          <h2 class="text-gray-400 uppercase tracking-wider font-semibold text-sm mb-2 mt-5">Loops</h2>
-          <li class="article-item" style="display: block;">
-            <a href="infinite-loops.html" class="block hover:text-blue-400">
-              <span data-title="infinite loops">Infinite Loops</span>
-              <p class="text-gray-400 text-xs">Learn how to create infinite loops...</p>
-            </a>
-          </li>
-          <h2 class="text-gray-400 uppercase tracking-wider font-semibold text-sm mb-2 mt-5">Tickets</h2>
-          <li class="article-item" style="display: block;">
-            <a href="transcript.html" class="block hover:text-blue-400">
-              <span data-title="Transcript">Ticket Transcript</span>
-              <p class="text-gray-400 text-xs">Learn how to create transcripts...</p>
-            </a>
-          </li>
-          <h2 class="text-gray-400 uppercase tracking-wider font-semibold text-sm mb-2 mt-5">Error Solving</h2>
-          <li class="article-item" style="display: block;">
-            <a href="godaddy.html" class="block hover:text-blue-400">
-              <span data-title="Image Generation Bug">GoDaddy Domain Issue</span>
-              <p class="text-gray-400 text-xs">Solution to the image generation...</p>
-            </a>
-          </li>
-          <li class="article-item" style="display: block;">
-            <a href="img-error.html" class="block hover:text-blue-400">
-              <span data-title="Image Generation Bug">Image Generation Bug</span>
-              <p class="text-gray-400 text-xs">Solution to the image generation...</p>
-            </a>
-          </li>
-          <h2 class="text-gray-400 uppercase tracking-wider font-semibold text-sm mb-2 mt-5">API Services</h2>
-          <li class="article-item" style="display: block;">
-            <a href="gemini.html" class="block hover:text-blue-400">
-              <span data-title="Discord Benefits">Gemini ChatBot</span>
-              <p class="text-gray-400 text-xs">Create your own AI ChatBot...</p>
-            </a>
-          </li>
-
-<footer class="bg-gray-800">
-    <div class="bg-gray-800 border-1 rounded-[10%] border-green-800 p-4 mt-8 text-center text-gray-300 text-sm">
-      <p>© 2025 Code Hub Community Guides.  All rights reserved.</p>
-      <br>
-      <p><strong>Join the Code Hub Discord Server</strong></p>
-  </div></footer>
-          
-        </ul>
-      </nav>
-    </aside>
-  
-    <main class="flex-1 p-8 ml-64">
-      <header class="mb-8 flex items-center justify-between">
-        <p class="text-7xl font-semibold text-white flex items-center">
-          Community Guides</p>
-          <img src="./codehub-logo.png" alt="Community Guides Icon" class="mr-100 w-30 h-30">
-        <div class="text-gray-400">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
-          
-        </path></div>
-      </header>
-  
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-        <a href="https://discord.gg/X5ESGvdP74" target="_blank" class="bg-gray-800 border-yellow-400 border-1 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
-          <div class="w-20 h-20 mr-4 flex-shrink-0">
-            <img src="discord.png" alt="">
-            </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-1">Code Hub Discord Server</h3>
-            <p class="text-gray-400 text-sm">Join our awesome Developer Community and become a Pro!</p>
-            <p class="text-gray-400 text-sm">Help us improve the guides!</p>
+        <div id="content-infinite-loops" class="hidden bg-gray-800 rounded-lg p-6 mt-6 text-white">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <p class="text-3xl font-semibold mb-4">Infinite Loops Guide</p>
+            <img src="./infinite loops.png" alt="Community Guides Icon" class="ml-120 w-15 h-15 mb-2" />
           </div>
-        </a>
 
-        <a href="https://partners.code-hub.cc" target="_blank" class="bg-gray-800  border-green-400 border-1 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
-          <div class="w-21 h-21 mr-4 flex-shrink-0 rounded-md">
-            <img class="rounded-full" src="codehub-stars.png" alt="">
-            </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-1">Code Hub Partners</h3>
-            <p class="text-gray-400 text-sm">All Official Partners of Code Hub can be found here.</p>
-            <p class="text-gray-400 text-sm">Advertisement • Recommended</p>
+          <p>We will use for this as an example a Rating System. We will make a a special channel for submiting a server
+            review.</p>
+          <p><code>/setup-review-system</code> command start</p> <br>
+          <p><strong>Custom Command:</strong></p>
+          <ul class="list-disc list-inside">
+            <li>Send form</li>
+            <li>Send ephemeral reply message</li>
+            <li>Send an API request to your BG webhook with the form responses as variables</li>
+          </ul> <br>
+
+          <p><strong>Webhook Event:</strong></p>
+          <ul class="list-disc list-inside">
+            <li>Webhook event start</li>
+            <li>Send review message and button</li>
+            <li>Button click start</li>
+            <li>Send form</li>
+            <li>Send ephemeral reply message</li>
+            <li>Send another API request to your BG webhook with the form responses as variables</li>
+          </ul> <br>
+          <p>Set at the end of the <code>/setup-review-system</code> blocks a send an API request block.</p>
+          <div class="relative group">
+            <pre class="bg-gray-900 p-4 rounded-md mt-4 overflow-auto">
+<code><strong>Method:</strong> POST https://api.botghost.com/webhook/{bot_id}/{event_id}
+            
+<strong>Headers:</strong> <strong>NameType</strong>
+              
+Authorization     API_KEY</code></pre>
+            <button
+              class="copy-button absolute top-2 right-2 bg-gray-700 text-gray-300 p-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+              title="Copy code">
+              <img class="h-5 w-5" src="copy-icon.png" alt="">
+            </button>
+
           </div>
-        </a>
 
 
-        <a href="infinite-loops.html" class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
-          <div class="w-20 h-20 mr-4 flex-shrink-0">
-            <img src="./infinite loops.png">
-            </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-1">Infinite Loops</h3>
-            <p class="text-gray-400 text-sm">Learn how to create Infinite Loops using BotGhost Webhooks</p>
-            <p class="text-gray-400 text-sm">Step-by-step explained</p>
+          <p class="mt-4">Remember to be careful with infinite loops!</p> <br>
+          <p>Credits: Jayce</p>
+        </div>
+
+        <div id="content-transcript" class="hidden bg-gray-800 rounded-lg p-6 mt-6 text-white">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <p class="text-3xl font-semibold mb-4">Ticket Transcript</p>
+            <img src="./transcript.png" alt="Community Guides Icon" class="ml-120 w-15 h-15 mb-2" />
           </div>
-        </a>
-  
-                <a href="transcript.html" class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
-          <div class="w-20 h-20 mr-4 flex-shrink-0">
-            <img src="./transcript.png" alt="">
-            </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-1">Ticket Transcripts</h3>
-            <p class="text-gray-400 text-sm">Create Transcripts for your tickets</p>
-            <p class="text-gray-400 text-sm">Step-by-step explained</p>
-          </div>
-        </a>
 
-        <a href="img-error.html" class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
-          <div class="w-20 h-20 mr-4 flex-shrink-0">
-            <img src="./img.bug.png" alt="">
-            </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-1">Image Generation Bug</h3>
-            <p class="text-gray-400 text-sm">Solution to the image generation bug.</p>
-            <p class="text-gray-400 text-sm">Step-by-step explained</p>
-          </div>
-        </a>
-  
-        <a href="gemini.html" class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
-          <div class="w-20 h-20 mr-4 flex-shrink-0">
-            <img src="gemini.png" alt="">
-            </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-1">Gemini ChatBot</h3>
-            <p class="text-gray-400 text-sm">Set up a free AI Chatbot using Google AI Studio's API</p>
-            <p class="text-gray-400 text-sm">Step-by-step explained</p>
-          </div>
-        </a>
+          <p>Are you looking for a free ticket transcript? We have a step-by-step guide listed below:</p>
+          <br>
+          <ul class="list-decimal list-inside">
+            <li>Head over to <a href="https://www.cookie-api.com">Cookie API</a></li>
+            <li>Create an account and head over to <code>Overview</code>. Once there copy the <code>Api Key</code>.</li>
+            <li>Go back to Botghost and add an API request.</li>
+            <br>
+            <li>Set the method as <span class="rtx">Post</span> and as the url enter
+              <code>https://api.cookie-api.com/api/transcript</code>
+            </li>
+            <li>In the url params add <code>channel_id</code> as the key and enter a valid channel id in the value
+              section.</li>
+            <p class="ml-5">(This can be replaced by a variable after step 10.)</p>
+            <li>Head over to the HTTP Headers and add <code>Authorization</code> as your key. </li>
+            <p class="ml-5">In the value section enter the
+              API Key from before.</p>
+            <li>Head over to the Request Body. Add <code>bot_token</code> as the key.</li>
+            <li>For the value we will need the bot token. <code>{TOKEN_SECRET}</code> wont work. we will need to use our
+              real bot token. </li>
+            <p class="ml-5">(Bot token can be reset in the Discord developer page under the bot section.)</p>
+            <br>
 
 
 
-        <a href="godaddy.html" class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
-          <div class="w-20 h-20 mr-4 flex-shrink-0">
-            <img src="godaddy.png" alt="">
-            </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-1">GoDaddy Domain Issue</h3>
-            <p class="text-gray-400 text-sm">Can't connect BotPanel with a GoDaddy Domain?</p>
-            <p class="text-gray-400 text-sm">Step-by-step explained</p>
+            <li>Test the request if you get a <code>code 400</code> check for any typos and make sure you dont have any
+              variables. </li>
+            <p class="ml-5">If you get a <code>code 200</code> everything worked.</p>
+            <li>copy the variable for the url that you received. </li>
+            <li>Replace all ids with variables so you can use it in your system.</li>
+          </ul> <br>
+          <p class="text-2xl">You should be all done, if you have any questions ask a <span class="rtx">CS
+              member</span>.</p>
+          <br>
+          <ul class="list-disc list-inside text-blue-400 underline">
+            <li><a
+                href="https://docs.botghost.com/custom-commands-and-events/actions/api-actions/send-an-api-request">BotGhost's
+                API Docs</a></li>
+            <li><a href="https://docs.cookie-api.com/en/docs/getting-started/home/">Cookie's API Docs</a></li>
+          </ul> <br>
+          <p>Credits: Betaburger</p>
+        </div>
+
+
+
+        <div id="content-img-error" class="hidden bg-gray-800 rounded-lg p-6 mt-6 text-white">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <p class="text-3xl font-semibold mb-4">Image Generation Bug</p>
+            <img src="./img.bug.png" alt="Community Guides Icon" class="ml-120 w-15 h-15 mb-2" />
           </div>
+
+          <div class="mt-3 list-disc list-inside">
+            <p>Are you experiencing a bug with the following Image Generation Module? We have a solution listed below:
+            </p> <br>
+            <ul>
+              <li>Make a <code>Custom Variable</code> Learn how by reading the <a
+                  href="https://docs.botghost.com/custom-commands-and-events/data-storage#creating-a-new-variable">BotGhost
+                  Docs</a></li>
+              <li>Save the API Key in the <code>Custom Variable</code></li>
+              <li>Use the <code>Custom Variable</code> as the API Key</li>
+            </ul>
+            <br>
+            <p>That's pretty much it, if it doesn't help you, please contact the <code>Community Support Members</code>.
+            </p>
+            <br>
+
+
+          </div>
+          <p>Credits: iDlrp</p>
+        </div>
+
+
+        <div id="content-gemini" class="hidden bg-gray-800 rounded-lg p-6 mt-6 text-white">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <p class="text-3xl font-semibold mb-4">Gemini ChatBot</p>
+            <img src="./gemini.png" alt="Community Guides Icon" class="ml-120 w-15 h-15 mb-2" />
+          </div>
+
+          <div class="mt-3 list-disc list-inside">
+            <p>To make it work, You must get a Gemini API key at <a href="https://aistudio.google.com/u/1/apikey"
+                target="_blank" class="text-blue-400 font-bold underline">Google AI Studio</a>.</p>
+            <br>
+            <p><strong>Required Blocks:</strong></p>
+            <ul class="list-disc list-inside">
+              <li>Option Text</li>
+              <li>Set a Unique Variable 3x</li>
+              <li>Send an API Request</li>
+              <li>Comparison Condition</li>
+              <li>Send message block 2x</li>
+            </ul> <br>
+            <div class="text-base">
+              <p class="text-xl"><strong>Step-by-Step explanation</strong></p>
+              <ol class="list-decimal list-inside">
+                <li>Set text option and name it <code>option_question</code></li> <br>
+                <li>Set a Unique Variable</li>
+                <p class="ml-5"><strong>Variable</strong> <span class="ml-60"> <Strong>Value</Strong></span></p>
+                <p><code class="ml-5">gemini_api_key</code> <span class="ml-35"><code>Your API Key</code></span></p><br>
+                <li>Set a Unique Variable</li>
+                <p class="ml-5"><strong>Variable</strong> <span class="ml-60"> <Strong>Value</Strong></span></p>
+                <p><code class="ml-5">language</code> <span class="ml-55"><code>English</code></span></p><br>
+                <li>Set a Unique Variable</li>
+                <p class="ml-5"><strong>Variable</strong> <span class="ml-60"> <Strong>Value</Strong></span></p>
+                <p><code class="ml-5">system_instruction</code> <span
+                    class="ml-20"><code>You are a Chatbot.</code></span></p><br>
+                <li>Send an API Request</li>
+                <p class="ml-5"><strong>Name</strong></p>
+                <p class="ml-5"><code>Gemini</code><br>
+                <p class="ml-5"><strong>Method</strong>
+                <p><code class="ml-5">POST</code> </p>
+                <br>
+                <span class="ml-3"> <Strong>Url:</Strong></span>
+
+
+                <div class="relative group mt-4 mb-4">
+                  <pre class="bg-gray-900 p-4 rounded-md mt-4 overflow-auto">
+<code><strong>https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent</strong></code></pre>
+                  <button
+                    class="copy-button absolute top-2 right-2 bg-gray-700 text-gray-300 p-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                    title="Copy code">
+                    <img class="h-5 w-5" src="copy-icon.png" alt="">
+                  </button>
+
+                </div>
+
+
+                <p class="ml-5 text-lg"><strong>URL Params</strong></p>
+                <p class="ml-5"><strong>Key</strong> <span class="ml-30"> <Strong>Value</Strong></span>
+                <p><code class="ml-5">key</code> <span class="ml-20"><code>{gemini_api_key}</code></span></p><br>
+                <p class="ml-5 text-lg"><strong>HTTP Headers</strong></p>
+                <p class="ml-5"><strong>Key</strong> <span class="ml-55"> <Strong>Value</Strong></span>
+                <p><code class="ml-5">Content-Type</code> <span class="ml-20"><code>application/json</code></span></p>
+                <br>
+                <p class="ml-5 text-lg"><strong>Request Body</strong></p>
+                <p class="ml-5"><strong>Key</strong> <span class="ml-100"> <Strong>Value</Strong></span>
+
+
+
+                <div class="relative group mt-4 mb-4">
+                  <pre class="bg-gray-900 p-4 rounded-md mt-4 overflow-auto">
+<code><strong>system_instruction</strong>  <strong>{     "parts":       { "text": "Response in {language}.{system_instruction}"}}</strong></code></pre>
+                  <button
+                    class="copy-button absolute top-2 right-2 bg-gray-700 text-gray-300 p-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                    title="Copy code">
+                    <img class="h-5 w-5" src="copy-icon.png" alt="">
+                  </button>
+                </div>
+
+                <div class="relative group mt-4 mb-4">
+                  <pre class="bg-gray-900 p-4 rounded-md mt-4 overflow-auto">
+<code><strong>contents</strong>            <strong>[     {       "parts": [         {           "text": "{option_question}"         }       ]     }   ]</strong>
+</code></pre>
+                  <button
+                    class="copy-button absolute top-2 right-2 bg-gray-700 text-gray-300 p-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                    title="Copy code">
+                    <img class="h-5 w-5" src="copy-icon.png" alt="">
+                  </button>
+
+                </div>
+
+                <div class="relative group mt-4 mb-4">
+                  <pre class="bg-gray-900 p-4 rounded-md mt-4 overflow-auto">
+<code><strong>tools</strong>               <strong>[     {         "googleSearch":{}         }     ]</strong>
+</code></pre>
+                  <button
+                    class="copy-button absolute top-2 right-2 bg-gray-700 text-gray-300 p-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                    title="Copy code">
+                    <img class="h-5 w-5" src="copy-icon.png" alt="">
+                  </button>
+
+                </div>
+
+
+
+                <li>Comparison Condition</li>
+                <p class="ml-5"><strong>Base Value</strong> <span class="ml-55"> <Strong>Comparison Type</Strong></span>
+                <p><code class="ml-5">{gemini.status}</code> <span class="ml-45"><code>Equal to</code></span></p><br>
+                <p>New Condition {gemini.status} must be equal to <code>200</code> <br> <br>
+                  <li>If equal to 200 then paste {gemini.response.candidates.0.content.parts.0.text} into a send a
+                    message block.</li>
+                <p><code>{gemini.response.candidates.0.content.parts.0.text}</code> is the response from Gemini.</p>
+                <br>
+                <li>Save the Command</li>
+              </ol>
+            </div> <br>
+            <p class="font-bold">Make sure to leave a vote for Foz for their awesome guide on how to create a simple
+              and free Gemini ChatBot.</p>
+
+            <br>
+
+          </div>
+          <p>Credits: Foz</p>
+        </div>
+
+        <div id="content-godaddy" class="hidden bg-gray-800 rounded-lg p-6 mt-6 text-white">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <p class="text-3xl font-semibold mb-4">GoDaddy Domain Issue</p>
+            <img src="./godaddy.png" alt="Community Guides Icon" class="ml-120 w-15 h-15 mb-2" />
+          </div>
+
+
+<div class="mt-3 list-disc list-inside">
+                        <p>If you experiencing a problem with GoDaddy Domain and BotPanel. This Documentation is for
+                            you.</p> <br>
+                        <p>To use a Custom Domain on BotPanel you must connect it with your Domain Host.
+                            Sadly the GoDaddy Domain Service doesn't allow us to place a <code>@</code> in the
+                            <code>CNAME</code> record.</p>
+                        <br>
+                        <p class="font-bold"><code>CNAME @ hosting.botpanel.gg Auto/Default </code> On GoDaddy putting
+                            the <code>@</code> as the Hostname is impossible. This is why you need to change the
+                            Nameservers.</p>
+                        <br>
+                        <p class="font-bold text-xl">You can use the Nameservers listed below:</p>
+                        <ul class="list-disc list-inside">
+                            <li><a href="https://cloudflare.com" target="_blank"
+                                    class="text-blue-400 underline">CloudFlare</a></li>
+                            <li><a href="https://netlify.com" target="_blank"
+                                    class="text-blue-400 underline">Netlify</a></li>
+
+                        </ul>
+                        <br>
+                        <p>Delete all DNS Records in GoDaddy rename the Nameservers in GoDaddy to the <br> Nameserver
+                            Provider (Netlify or CloudFlare) create new DNS Records in Netlify or CloudFlare <br> and
+                            that should be it. </p>
+                        <br>
+                        <ul class="list-disc list-inside">
+                            <li><a href="https://docs.netlify.com/domains/get-started-with-domains/" target="_blank"
+                                    class="text-blue-400 underline">CloudFlare Docs</a></li>
+                            <li><a href="https://developers.cloudflare.com/dns/zone-setups/full-setup/setup/" target="blank" class="text-blue-400 underline">Netlify Docs</a></li>
+
+                        </ul>
+                        <br>
+                        <p class="font-bold">Make sure to leave a vote for Fozmu for their awesome guide.</p>
+                        <br>
+                        <p>Credits: Foz</p>
+                    </div>
+
+
+        </div>
+
+        <div id="content-vote" class="hidden bg-gray-800 rounded-lg p-6 mt-6 text-white">
+           <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <p class="text-3xl font-semibold mb-4">Voting System</p>
+            <img src="./vote.png" alt="Community Guides Icon" class="ml-120 w-15 h-15 mb-2" />
+          </div>
+          <p>A Documentation Regarding the Voting System will be added soon.</p>
+          <p class="mt-4">This will cover how to create a simple voting system using BotGhost.</p>
+<br>
+
+
+          <a href="./index.html" type="button" id="sidebar-community-guides"
+                class="w-full text-left block bg-sky-700 p-4 r-4 transition-all duration-400 hover:bg-sky-800 cursor-pointer rounded-md hover:scale-101">
+                <span data-title="community guides">Get back to Homepage</span>
+                <p class="text-white text-xs">Official Community Guides page...</p>
         </a>
 
         
-        <a href="vote.html" class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
-          <div class="w-20 h-20 mr-4 flex-shrink-0">
-            <img src="./vote.png" alt="">
-            </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-1">Voting System</h3>
-            <p class="text-gray-400 text-sm">Create Free and Beginner Friendly Voting System.</p>
-            <p class="text-gray-400 text-sm">Step-by-step explained</p>
-          </div>
-        </a>
-<!--
-        <a href="afk.html" class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
-          <div class="w-20 h-20 mr-4 flex-shrink-0">
-            <img src="afk.png" alt="">
-            </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-1">AFK System</h3>
-            <p class="text-gray-400 text-sm">Create a unique and simple AFK System!</p>
-            <p class="text-gray-400 text-sm">Step-by-step explained</p>
-          </div>
-        </a>
-      -->
+           
 
 
-       
-      </div>
-    </main>
-    
+        </div>
 
-  </div>
+        <div id="content-afk" class="hidden bg-gray-800 rounded-lg p-6 mt-6 text-white">
+          <h2 class="text-2xl font-semibold mb-4">AFK System Guide</h2>
+          <p>Instructions to create a unique and simple AFK (Away From Keyboard) system.</p>
+          <p class="mt-4">
+            This will cover how to detect AFK status and implement custom responses.
+          </p>
+        </div>
+
+      </main>
+
+
+    </div>
 
 
   </div>
+
+
+
+
+
+
+
+
+
+
 
   <div class="mobile-only">
 
-        <main class="flex-1 p-3 ml-5">
-      <header class="mb-8 flex items-center justify-between">
-        <p class="text-4xl font-semibold text-white flex items-center">
-          Community Guides</p>
+    <main class="flex-1 p-3 ml-5">
+      <div id="mobile-main-content-area">
+        <header class="mb-8 flex items-center justify-between">
+          <p class="text-4xl font-semibold text-white flex items-center">
+            Community Guides</p>
           <img src="./codehub-logo.png" alt="Community Guides Icon" class="mr-[0%] w-20 h-20">
-        <div class="text-gray-400">
+          <div class="text-gray-400">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
-          
-        </path></div>
-      </header>
-  
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-        <a href="https://discord.gg/X5ESGvdP74" target="_blank" class="bg-gray-800 border-yellow-400 border-1 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
-          <div class="w-20 h-20 mr-4 flex-shrink-0">
-            <img src="discord.png" alt="">
-            </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-1">Code Hub Discord Server</h3>
-            <p class="text-gray-400 text-sm">Join our awesome Developer Community and become a Pro!</p>
-            <p class="text-gray-400 text-sm">Help us improve the guides!</p>
+            </path>
           </div>
-        </a>
+        </header>
 
-<a href="https://partners.code-hub.cc" target="_blank" class="bg-gray-800  border-green-400 border-1 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
-          <div class="w-21 h-21 mr-4 flex-shrink-0 rounded-md">
-            <img class="rounded-full" src="codehub-stars.png" alt="">
+        <div id="mobile-modules-grid" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+          <button id="mobile-module-discord" type="button"
+            class="bg-gray-800 border-yellow-400 border-1 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 cursor-pointer">
+            <div class="w-20 h-20 mr-4 flex-shrink-0">
+              <img src="discord.png" alt="">
             </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-1">Code Hub Partners</h3>
-            <p class="text-gray-400 text-sm">All Official Partners of Code Hub can be found here.</p>
-          </div>
-        </a>
-
-
-        <a href="infinite-loops.html" class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
-          <div class="w-20 h-20 mr-4 flex-shrink-0">
-            <img src="./infinite loops.png">
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">Code Hub Discord Server</h3>
+              <p class="text-gray-400 text-sm">Join our awesome Developer Community and become a Pro!</p>
+              <p class="text-gray-400 text-sm">Help us improve the guides!</p>
             </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-1">Infinite Loops</h3>
-            <p class="text-gray-400 text-sm">Learn how to create Infinite Loops by using BotGhost Webhooks</p>
-            <p class="text-gray-400 text-sm">Step-by-step explained</p>
-          </div>
-        </a>
-  
-                <a href="transcript.html" class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
-          <div class="w-20 h-20 mr-4 flex-shrink-0">
-            <img src="./transcript.png" alt="">
+          </button>
+
+          <button id="mobile-module-partners" type="button"
+            class="bg-gray-800 border-green-400 border-1 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 cursor-pointer">
+            <div class="w-21 h-21 mr-4 flex-shrink-0 rounded-md">
+              <img class="rounded-full" src="codehub-stars.png" alt="">
             </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-1">Ticket Transcripts</h3>
-            <p class="text-gray-400 text-sm">Create a Free Ticket Transcripts by using Cookie API</p>
-            <p class="text-gray-400 text-sm">Step-by-step explained</p>
-          </div>
-        </a>
-
-        <a href="img-error.html" class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
-          <div class="w-20 h-20 mr-4 flex-shrink-0">
-            <img src="./img.bug.png" alt="">
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">Code Hub Partners</h3>
+              <p class="text-gray-400 text-sm">All Official Partners of Code Hub can be found here.</p>
             </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-1">Image Generation Bug</h3>
-            <p class="text-gray-400 text-sm">Solution on easily solving the image generation module bug.</p>
-            <p class="text-gray-400 text-sm">Step-by-step explained</p>
-          </div>
-        </a>
-  
-        <a href="gemini.html" class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
-          <div class="w-20 h-20 mr-4 flex-shrink-0">
-            <img src="gemini.png" alt="">
+          </button>
+
+          <button id="mobile-module-infinite-loops" type="button"
+            class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 cursor-pointer">
+            <div class="w-20 h-20 mr-4 flex-shrink-0">
+              <img src="./infinite loops.png">
             </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-1">Gemini ChatBot</h3>
-            <p class="text-gray-400 text-sm">Set up a free AI Chatbot using Google AI Studio's API</p>
-            <p class="text-gray-400 text-sm">Step-by-step explained</p>
-          </div>
-        </a>
-
-
-
-        <a href="godaddy.html" class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
-          <div class="w-20 h-20 mr-4 flex-shrink-0">
-            <img src="godaddy.png" alt="">
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">Infinite Loops</h3>
+              <p class="text-gray-400 text-sm">Learn how to create Infinite Loops by using BotGhost Webhooks</p>
+              <p class="text-gray-400 text-sm">Step-by-step explained</p>
             </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-1">GoDaddy Domain Issue</h3>
-            <p class="text-gray-400 text-sm">Can't connect the BotPanel with a GoDaddy Domain?</p>
-            <p class="text-gray-400 text-sm">Step-by-step explained</p>
-          </div>
-        </a>
+          </button>
 
-        <a href="vote.html" class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
-          <div class="w-20 h-20 mr-4 flex-shrink-0">
-            <img src="./vote.png" alt="">
+          <button id="mobile-module-transcript" type="button"
+            class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 cursor-pointer">
+            <div class="w-20 h-20 mr-4 flex-shrink-0">
+              <img src="./transcript.png" alt="">
             </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-1">Voting System</h3>
-            <p class="text-gray-400 text-sm">Create Free and Beginner Friendly Voting System.</p>
-            <p class="text-gray-400 text-sm">Step-by-step explained</p>
-          </div>
-        </a>
-
-        <a href="afk.html" class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105">
-          <div class="w-20 h-20 mr-4 flex-shrink-0">
-            <img src="afk.png" alt="">
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">Ticket Transcripts</h3>
+              <p class="text-gray-400 text-sm">Create a Free Ticket Transcripts by using Cookie API</p>
+              <p class="text-gray-400 text-sm">Step-by-step explained</p>
             </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-1">AFK System</h3>
-            <p class="text-gray-400 text-sm">Create a unique and simple AFK System!</p>
-            <p class="text-gray-400 text-sm">Step-by-step explained</p>
-          </div>
-        </a>
+          </button>
 
+          <button id="mobile-module-img-error" type="button"
+            class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 cursor-pointer">
+            <div class="w-20 h-20 mr-4 flex-shrink-0">
+              <img src="./img.bug.png" alt="">
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">Image Generation Bug</h3>
+              <p class="text-gray-400 text-sm">Solution on easily solving the image generation module bug.</p>
+              <p class="text-gray-400 text-sm">Step-by-step explained</p>
+            </div>
+          </button>
 
-       
+          <button id="mobile-module-gemini" type="button"
+            class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 cursor-pointer">
+            <div class="w-20 h-20 mr-4 flex-shrink-0">
+              <img src="gemini.png" alt="">
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">Gemini ChatBot</h3>
+              <p class="text-gray-400 text-sm">Set up a free AI Chatbot using Google AI Studio's API</p>
+              <p class="text-400 text-sm">Step-by-step explained</p>
+            </div>
+          </button>
+
+          <button id="mobile-module-godaddy" type="button"
+            class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 cursor-pointer">
+            <div class="w-20 h-20 mr-4 flex-shrink-0">
+              <img src="godaddy.png" alt="">
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">GoDaddy Domain Issue</h3>
+              <p class="text-gray-400 text-sm">Can't connect the BotPanel with a GoDaddy Domain?</p>
+              <p class="text-gray-400 text-sm">Step-by-step explained</p>
+            </div>
+          </button>
+
+          <button id="mobile-module-vote" type="button"
+            class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 cursor-pointer">
+            <div class="w-20 h-20 mr-4 flex-shrink-0">
+              <img src="./vote.png" alt="">
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">Voting System</h3>
+              <p class="text-gray-400 text-sm">Create Free and Beginner Friendly Voting System.</p>
+              <p class="text-gray-400 text-sm">Step-by-step explained</p>
+            </div>
+          </button>
+
+          <button id="mobile-module-afk" type="button"
+            class="bg-gray-800 rounded-lg p-6 flex items-center transition-all duration-200 hover:border-blue-400 hover:border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 cursor-pointer">
+            <div class="w-20 h-20 mr-4 flex-shrink-0">
+              <img src="afk.png" alt="">
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">AFK System</h3>
+              <p class="text-gray-400 text-sm">Create a unique and simple AFK System!</p>
+              <p class="text-gray-400 text-sm">Step-by-step explained</p>
+            </div>
+          </button>
+        </div>
       </div>
+      <div id="mobile-content-community-guides" class="hidden bg-gray-800 rounded-lg p-6 mt-6 text-white">
+        <h2 class="text-2xl font-semibold mb-4">Welcome to Community Guides! (Mobile)</h2>
+        <p>This is the main landing page content for the Community Guides on mobile. You can put an introduction, recent
+          updates, or featured guides here.</p>
+        <p class="mt-4">This content is shown when 'Community Guides' is selected from the sidebar. You can edit this
+          text to be the main landing page.</p>
+      </div>
+
+      <div id="mobile-content-credits" class="hidden bg-gray-800 rounded-lg p-6 mt-6 text-white">
+        <h2 class="text-2xl font-semibold mb-4">Credits (Mobile)</h2>
+        <p>This page acknowledges all the contributors and helpers for this project on mobile.</p>
+        <ul class="list-disc ml-6 mt-4">
+          <li>Developer A</li>
+          <li>Designer B</li>
+          <li>Community Contributor C</li>
+        </ul>
+      </div>
+
+      <div id="mobile-content-discord" class="hidden bg-gray-800 rounded-lg p-6 mt-6 text-white">
+        <h2 class="text-2xl font-semibold mb-4">Code Hub Discord Server Details (Mobile)</h2>
+        <p>This is the detailed content for the Code Hub Discord Server on mobile. Here you can provide more information
+          about joining, what to expect, and any benefits for community members.</p>
+        <p class="mt-4">You might include embedded Discord widgets, more links, or FAQs here.</p>
+      </div>
+
+      <div id="mobile-content-partners" class="hidden bg-gray-800 rounded-lg p-6 mt-6 text-white">
+        <h2 class="text-2xl font-semibold mb-4">Code Hub Partners Program (Mobile)</h2>
+        <p>Detailed information about the Code Hub Partners program for mobile. Explain how partnerships work, the
+          criteria, and the benefits for both parties.</p>
+        <p class="mt-4">Include a link to the partners page: <a href="https://partners.code-hub.cc" target="_blank"
+            class="text-blue-400 hover:underline">Code Hub Partners</a></p>
+      </div>
+
+      <div id="mobile-content-infinite-loops" class="hidden bg-gray-800 rounded-lg p-6 mt-6 text-white">
+        <h2 class="text-2xl font-semibold mb-4">Infinite Loops Guide (Mobile)</h2>
+        <p>Here's the comprehensive guide on how to create infinite loops using BotGhost Webhooks (Mobile).</p>
+        <p class="mt-4">
+          <strong>Step 1:</strong> Do X...<br>
+          <strong>Step 2:</strong> Do Y...<br>
+          <strong>Step 3:</strong> Do Z...
+        </p>
+        <div class="relative group">
+          <pre class="bg-gray-900 p-4 rounded-md mt-4 overflow-auto"><code>
+// Example code for infinite loop
+function infiniteLoop() {
+    while (true) {
+        console.log("Looping forever!");
+        // Add your webhook call here
+    }
+}
+infiniteLoop();
+    </code></pre>
+          <button
+            class="copy-button absolute top-2 right-2 bg-gray-700 text-gray-300 p-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+            title="Copy code">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M8 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-2M8 5a2 2 0 012-2h3m-3 0h-3.5a2 2 0 00-2 2v3m11-9h-1.5M12 5v11m0 0l-3-3m3 3l3-3" />
+            </svg>
+          </button>
+        </div>
+        <p class="mt-4">Remember to be careful with infinite loops!</p>
+      </div>
+
+      <div id="mobile-content-transcript" class="hidden bg-gray-800 rounded-lg p-6 mt-6 text-white">
+        <h2 class="text-2xl font-semibold mb-4">Ticket Transcripts Guide (Mobile)</h2>
+        <p>Detailed steps on how to create transcripts for your tickets using the Cookie API (Mobile).</p>
+        <p class="mt-4">
+          This section would contain code examples, API endpoint explanations, and any necessary setup instructions for
+          the Cookie API.
+        </p>
+      </div>
+
+      <div id="mobile-content-img-error" class="hidden bg-gray-800 rounded-lg p-6 mt-6 text-white">
+        <h2 class="text-2xl font-semibold mb-4">Image Generation Bug Solution (Mobile)</h2>
+        <p>A step-by-step solution to troubleshoot and fix the image generation bug (Mobile).</p>
+        <p class="mt-4">
+          Common issues, debugging tips, and potential code adjustments will go here.
+        </p>
+      </div>
+
+      <div id="mobile-content-gemini" class="hidden bg-gray-800 rounded-lg p-6 mt-6 text-white">
+        <h2 class="text-2xl font-semibold mb-4">Gemini ChatBot Setup (Mobile)</h2>
+        <p>Instructions on how to set up your own free AI Chatbot using Google AI Studio's API (Mobile).</p>
+        <p class="mt-4">
+          This guide will walk you through obtaining API keys, making requests, and integrating the chatbot into your
+          application.
+        </p>
+      </div>
+
+      <div id="mobile-content-godaddy" class="hidden bg-gray-800 rounded-lg p-6 mt-6 text-white">
+        <h2 class="text-2xl font-semibold mb-4">GoDaddy Domain Issue Solution (Mobile)</h2>
+        <p>Facing issues connecting BotPanel with a GoDaddy Domain? This guide provides the solution (Mobile).</p>
+        <p class="mt-4">
+          It will cover DNS settings, common GoDaddy quirks, and verification steps.
+        </p>
+      </div>
+
+      <div id="mobile-content-vote" class="hidden bg-gray-800 rounded-lg p-6 mt-6 text-white">
+        <h2 class="text-2xl font-semibold mb-4">Voting System Guide (Mobile)</h2>
+        <p>Learn how to create a free and beginner-friendly voting system (Mobile).</p>
+        <p class="mt-4">
+          This section will detail the logic, potential platforms, and implementation steps for a simple voting system.
+        </p>
+      </div>
+
+      <div id="mobile-content-afk" class="hidden bg-gray-800 rounded-lg p-6 mt-6 text-white">
+        <h2 class="text-2xl font-semibold mb-4">AFK System Guide (Mobile)</h2>
+        <p>Instructions to create a unique and simple AFK (Away From Keyboard) system (Mobile).</p>
+        <p class="mt-4">
+          This will cover how to detect AFK status and implement custom responses.
+        </p>
+      </div>
+
     </main>
-    
 
 
   </div>
-    
-    <script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202505200101/show_ads_impl_with_ama_fy2021.js?client=ca-pub-2838682799306613&amp;plah=127.0.0.1"></script><script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const searchInput = document.getElementById('searchInput');
-        const articleList = document.getElementById('articleList');
-        const articles = articleList.querySelectorAll('.article-item');
-    
-        searchInput.addEventListener('input', function () {
-          const searchTerm = searchInput.value.toLowerCase();
-    
-          articles.forEach(article => {
-            const title = article.querySelector('span').dataset.title.toLowerCase();
-            const textContent = article.textContent.toLowerCase();
-            const listItem = article.closest('li');
-    
-            if (searchTerm.length > 0 && (title.includes(searchTerm) || textContent.includes(searchTerm))) {
-              listItem.style.display = 'block';
-            } else if (searchTerm.length > 0) {
-              listItem.style.display = 'none';
+
+  <script
+    src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202505200101/show_ads_impl_with_ama_fy2021.js?client=ca-pub-2838682799306613&amp;plah=127.0.0.1"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const searchInput = document.getElementById('searchInput');
+      const articleList = document.getElementById('articleList');
+      const articles = articleList.querySelectorAll('.article-item');
+
+      searchInput.addEventListener('input', function () {
+        const searchTerm = searchInput.value.toLowerCase();
+
+        articles.forEach(article => {
+          const title = article.querySelector('span').dataset.title.toLowerCase();
+          const textContent = article.textContent.toLowerCase();
+          const listItem = article.closest('li');
+
+          if (searchTerm.length > 0 && (title.includes(searchTerm) || textContent.includes(searchTerm))) {
+            listItem.style.display = 'block';
+          } else if (searchTerm.length > 0) {
+            listItem.style.display = 'none';
+          } else {
+            listItem.style.display = 'block';
+          }
+        });
+      });
+
+      articles.forEach(article => {
+        const listItem = article.closest('li');
+        listItem.style.display = 'block';
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Desktop elements
+      const desktopMainContentArea = document.getElementById('desktop-main-content-area');
+      const desktopModules = document.querySelectorAll('#desktop-modules-grid button[id^="module-"]');
+      const desktopContents = document.querySelectorAll('.desktop-only [id^="content-"]'); // Selects all content divs in desktop-only area
+
+      // Mobile elements
+      const mobileMainContentArea = document.getElementById('mobile-main-content-area');
+      const mobileModules = document.querySelectorAll('#mobile-modules-grid button[id^="mobile-module-"]');
+      const mobileContents = document.querySelectorAll('.mobile-only [id^="mobile-content-"]'); // Selects all content divs in mobile-only area
+
+      // Sidebar elements (Desktop)
+      const sidebarDesktopModules = document.querySelectorAll('aside nav button[id^="sidebar-"]');
+
+      // Function to hide all detailed content blocks for a given set
+      function hideAllContents(contents) {
+        contents.forEach(content => {
+          content.classList.add('hidden');
+        });
+      }
+
+      // Function to set up event listeners for a given set of modules (buttons) and content areas
+      function setupModuleListeners(modules, mainContentArea, allContents, prefix) {
+        modules.forEach(module => {
+          module.addEventListener('click', function (event) {
+            // Check if this is the "Community Guides" button for desktop sidebar
+            // or its mobile equivalent (if you add a mobile sidebar later)
+            if (module.id === 'sidebar-community-guides' || module.id === 'mobile-sidebar-community-guides') {
+              hideAllContents(allContents); // Hide all currently displayed detailed content
+              desktopMainContentArea.classList.remove('hidden'); // Show the desktop main modules grid
+              mobileMainContentArea.classList.remove('hidden'); // Also show mobile main modules grid if applicable
             } else {
-              listItem.style.display = 'block';
+              // This is for all other modules/sidebar items
+              const contentId = `${module.id.replace(prefix, 'content-')}`;
+              let targetContent = document.getElementById(contentId);
+
+              // Handle the case where the mobile button ID starts with 'mobile-module-'
+              // but its content div starts with 'mobile-content-'
+              let mobileContentId = `${module.id.replace('mobile-module-', 'mobile-content-')}`;
+              if (module.id.startsWith('mobile-module-')) {
+                targetContent = document.getElementById(mobileContentId);
+              } else if (module.id.startsWith('mobile-sidebar-')) {
+                targetContent = document.getElementById(module.id.replace('mobile-sidebar-', 'mobile-content-'));
+              } else if (module.id.startsWith('sidebar-')) {
+                targetContent = document.getElementById(module.id.replace('sidebar-', 'content-'));
+              }
+
+
+              if (targetContent) {
+                // First, hide ALL possible content divs (both desktop and mobile)
+                hideAllContents(desktopContents);
+                hideAllContents(mobileContents);
+
+                // Then, hide the main grid areas for both desktop and mobile
+                desktopMainContentArea.classList.add('hidden');
+                mobileMainContentArea.classList.add('hidden');
+
+                // Finally, show the specific target content
+                targetContent.classList.remove('hidden');
+
+                targetContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
             }
           });
         });
-    
-    
-        articles.forEach(article => {
-          const listItem = article.closest('li');
-          listItem.style.display = 'block';
-        });
-      });
-    </script>
+      }
+
+      // Initial state: ensure all content sections are hidden when the page loads
+      hideAllContents(desktopContents);
+      hideAllContents(mobileContents);
+
+      // Setup listeners for desktop main modules
+      setupModuleListeners(desktopModules, desktopMainContentArea, desktopContents, 'module-');
+
+      // Setup listeners for mobile main modules
+      // Note: For mobile, it will hide the mobileMainContentArea and show mobile-specific content.
+      setupModuleListeners(mobileModules, mobileMainContentArea, mobileContents, 'mobile-module-');
+
+      // Setup listeners for desktop sidebar modules
+      // These will hide desktopMainContentArea and show desktop-specific content.
+      setupModuleListeners(sidebarDesktopModules, desktopMainContentArea, desktopContents, 'sidebar-');
+
+      // Ensure the correct initial state:
+      // By default, show the main content area (modules grid) and hide any specific content divs.
+      desktopMainContentArea.classList.remove('hidden');
+      mobileMainContentArea.classList.remove('hidden'); // Ensure mobile view also starts with its modules
+    });
+  </script>
 
 
-<style>
 
-aside::-webkit-scrollbar {
+
+
+
+
+
+  <style>
+    aside::-webkit-scrollbar {
       width: 4px;
     }
 
@@ -395,73 +1058,80 @@ aside::-webkit-scrollbar {
     }
 
     aside::-webkit-scrollbar-thumb {
-      background-color: #60a5fa;
+      background-color: #328cf9;
       border-radius: 10px;
     }
 
     aside::-webkit-scrollbar-thumb:hover {
-      background-color: #3a7fbb;
+      background-color: #0b75d2;
     }
 
-code {
-  color: #60a5fa
-}
+    code {
+      color: #60a5fa
+    }
 
 
 
-ol li::marker {
-  color: #60a5fa;
-}
+    ol li::marker {
+      color: #60a5fa;
+    }
 
-ul li::marker {
-  color: #60a5fa;
-}
+    ul li::marker {
+      color: #60a5fa;
+    }
 
-html,
-body {
-  overflow-y: scroll;
-}
+    html,
+    body {
+      overflow-y: scroll;
+    }
+
+    .button {
+      text-align: left;
+    }
+
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: #161616;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #328cf9;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #0b75d2;
+    }
 
 
-::-webkit-scrollbar {
-  width: 7px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #60a5fa;
-  border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #3a7fbb;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #0f0f0f;
-}
 
 
-.desktop-only {
-    display: block;
-  }
-  
-  @media (max-width: 1000px) {
     .desktop-only {
-      display: none;
-    }
-  }
-
-  
-
-.mobile-only {
-    display: none;
-  }
-  
-  @media (max-width: 1000px) {
-    .mobile-only {
       display: block;
     }
-  }
 
-</style>
+    @media (max-width: 1000px) {
+      .desktop-only {
+        display: none;
+      }
+    }
+
+
+
+    .mobile-only {
+      display: none;
+    }
+
+    @media (max-width: 1000px) {
+      .mobile-only {
+        display: block;
+      }
+    }
+  </style>
+  <script src="script.js"></script>
+
 </html>
